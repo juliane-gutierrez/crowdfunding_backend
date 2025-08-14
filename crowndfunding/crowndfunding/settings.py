@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'fundraisers.app.FundraisersConfig',
+    'fundraisers.apps.FundraisersConfig',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'crownfunding.urls'
+ROOT_URLCONF = 'crowndfunding.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'crownfunding.wsgi.application'
+WSGI_APPLICATION = 'crowndfunding.wsgi.application'
 
 
 # Database
