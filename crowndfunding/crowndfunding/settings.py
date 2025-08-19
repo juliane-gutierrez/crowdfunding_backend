@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'fundraisers.apps.FundraisersConfig',
+    'users.apps.UsersConfig',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser' # Custom user model that we added in the users/models.py file. 
+# It tells Django to use the CustomUser model instead of the default/built-in User model.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
