@@ -13,4 +13,6 @@ class PledgeSerializer(serializers.ModelSerializer):
 
 class FundraiserDetailSerializer(FundraiserSerializer):
     pledges = PledgeSerializer(many=True, read_only=True)
+
+    
     
