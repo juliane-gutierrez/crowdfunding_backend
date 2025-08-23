@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'fundraisers.apps.FundraisersConfig',
     'users.apps.UsersConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# we are overring the default authentication classes to use TokenAuthentication
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 AUTH_USER_MODEL = 'users.CustomUser' # Custom user model that we added in the users/models.py file. 
 # It tells Django to use the CustomUser model instead of the default/built-in User model.
 
